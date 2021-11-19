@@ -1,0 +1,17 @@
+FROM python:3.9-alpine
+
+MAINTAINER Hundeyin Oluwadamilola
+
+ENV PYTHONUNBUFFERED 1
+
+COPY ./requirements.txt /requirements.txt
+
+RUN pip install -r /requirements.txt
+
+RUN mkdir /app
+
+COPY ./app /app
+
+RUN adduser -D user
+
+USER user
