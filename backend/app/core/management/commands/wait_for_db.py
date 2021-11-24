@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from django.utils import OperationalError
+from django.db.utils import OperationalError
 from django.db import connections
 import time
 
